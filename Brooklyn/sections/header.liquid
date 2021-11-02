@@ -138,12 +138,14 @@
               {% endcomment %}
               {% if request.page_type == 'index' %}
                 <h1 class="site-header__logo large--left" itemscope itemtype="http://schema.org/Organization">
+                  <h1>TEST</h1>
               {% else %}
                 <div class="h1 site-header__logo large--left" itemscope itemtype="http://schema.org/Organization">
+                  <h1>TEST2</h1>
               {% endif %}
                 {% capture image_size %}{{ logo_max_width | escape }}x{% endcapture %}
-
-                <a href="{{ routes.root_url }}" itemprop="url" class="site-header__logo-link">
+                  <h1>TEST3</h1>
+                  <a href="{{ routes.root_url }}" itemprop="url" class="site-header__logo-link">
                   {% if section.settings.logo %}
                     <img class="site-header__logo-image" src="{{ section.settings.logo | img_url: image_size }}" srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
 
